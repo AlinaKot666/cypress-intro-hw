@@ -14,6 +14,18 @@ describe('Registration', () => {
     cy.contains('Password required').should('be.visible');
   });
 
+  it('Should validate email format', () => {
+    cy.get('#signupEmail').type('invalidEmail');
+    cy.contains('Email is incorrect').should('be.visible');
+  });
+
+  it('Should show error if passwords do not match', () => {
+    cy.get('#signupPassword').type('Password123');
+    cy.get('#signupRepeatPassword').type('Password124');
+
+    cy.contains('Passwords do not match').should('be.visible');
+  });
+
   it('Should register successfully', () => {
     const email = `test${Date.now()}@mail.com`;
 

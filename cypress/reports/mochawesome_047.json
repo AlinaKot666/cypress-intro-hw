@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-04-26T16:58:40.564Z",
+    "end": "2026-04-26T16:58:48.338Z",
+    "duration": 7774,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1cbe4a19-24f6-4fde-b0f8-31aaaf5eab11",
+      "title": "",
+      "fullFile": "cypress/e2e/garage.cy.js",
+      "file": "cypress/e2e/garage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1b59d937-8d4d-4d7e-ab74-48fd7c6bb275",
+          "title": "Garage flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add car",
+              "fullTitle": "Garage flow Add car",
+              "timedOut": null,
+              "duration": 7721,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Add car').should('be.visible').click();\ncy.get('#addCarBrand').select('Audi');\ncy.get('#addCarModel').select(1);\ncy.get('#addCarMileage').should('be.visible').clear().type('100').blur();\ncy.get('.modal-footer .btn-primary').click();\ncy.get('.modal').should('not.exist');\ncy.get('body').should('contain', 'Audi');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is `disabled`:\n\n`<button _ngcontent-sko-c53=\"\" type=\"button\" class=\"btn btn-primary\" disabled=\"\">Login</button>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Garage flow`",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is `disabled`:\n\n`<button _ngcontent-sko-c53=\"\" type=\"button\" class=\"btn btn-primary\" disabled=\"\">Login</button>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Garage flow`\n    at Object.isNotDisabled (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:153204:58)\n    at runAllChecks (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:115483:26)\n    at retryActionability (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:115572:16)\n    at tryCatcher (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:152042:70)\n    at <unknown> (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:151957:14)\n    at tryCatcher (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-intro-hw/./cypress/e2e/garage.cy.js:16:25)",
+                "diff": null
+              },
+              "uuid": "91274696-a82f-47e6-be45-8e2a83cf3310",
+              "parentUUID": "1b59d937-8d4d-4d7e-ab74-48fd7c6bb275",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "91274696-a82f-47e6-be45-8e2a83cf3310"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7721,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

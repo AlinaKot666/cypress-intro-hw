@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-26T13:09:25.865Z",
+    "end": "2026-04-26T13:09:29.686Z",
+    "duration": 3821,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1bd5e805-db6f-4ca3-a705-af13a78275ee",
+      "title": "",
+      "fullFile": "cypress/e2e/smoke.cy.js",
+      "file": "cypress/e2e/smoke.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "94ca000c-306d-4c17-96bf-5ee10bc27e04",
+          "title": "Home page UI elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should check Sign up button",
+              "fullTitle": "Home page UI elements Should check Sign up button",
+              "timedOut": null,
+              "duration": 2395,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Sign up').should('be.visible');",
+              "err": {},
+              "uuid": "e5133c13-7592-4cba-8053-9c208419bb61",
+              "parentUUID": "94ca000c-306d-4c17-96bf-5ee10bc27e04",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should check header buttons",
+              "fullTitle": "Home page UI elements Should check header buttons",
+              "timedOut": null,
+              "duration": 569,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('header').should('be.visible').within(() => {\n  cy.contains('Home').should('be.visible');\n  cy.contains('About').should('be.visible');\n  cy.contains('Contacts').should('be.visible');\n  cy.contains('Guest log in').should('be.visible');\n});",
+              "err": {},
+              "uuid": "31ddea69-bc27-419e-b94c-b0b745e82340",
+              "parentUUID": "94ca000c-306d-4c17-96bf-5ee10bc27e04",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should check footer social icons",
+              "fullTitle": "Home page UI elements Should check footer social icons",
+              "timedOut": null,
+              "duration": 372,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('a[href*=\"facebook\"]').should('exist');\ncy.get('a[href*=\"t.me\"]').should('exist');\ncy.get('a[href*=\"youtube\"]').should('exist');\ncy.get('a[href*=\"instagram\"]').should('exist');\ncy.get('a[href*=\"linkedin\"]').should('exist');",
+              "err": {},
+              "uuid": "aefa4676-cb36-4003-ab70-8aa912b7d13c",
+              "parentUUID": "94ca000c-306d-4c17-96bf-5ee10bc27e04",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should check footer contacts",
+              "fullTitle": "Home page UI elements Should check footer contacts",
+              "timedOut": null,
+              "duration": 357,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('ithillel.ua').should('be.visible');\ncy.contains('support@ithillel.ua').should('be.visible');",
+              "err": {},
+              "uuid": "e937e8ca-65f1-43f3-bd27-b313aecb4f31",
+              "parentUUID": "94ca000c-306d-4c17-96bf-5ee10bc27e04",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e5133c13-7592-4cba-8053-9c208419bb61",
+            "31ddea69-bc27-419e-b94c-b0b745e82340",
+            "aefa4676-cb36-4003-ab70-8aa912b7d13c",
+            "e937e8ca-65f1-43f3-bd27-b313aecb4f31"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3693,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

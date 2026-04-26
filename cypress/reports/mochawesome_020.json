@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-04-26T16:47:44.416Z",
+    "end": "2026-04-26T16:47:44.847Z",
+    "duration": 431,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "006db64a-aebf-4512-8490-4b2c43255b36",
+      "title": "",
+      "fullFile": "cypress/e2e/garage.cy.js",
+      "file": "cypress/e2e/garage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f7e0ea63-0a7e-48da-9251-12a24669f7c8",
+          "title": "Garage flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add car",
+              "fullTitle": "Garage flow Add car",
+              "timedOut": null,
+              "duration": 387,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Add car', {\n  timeout: 10000\n}).should('be.visible').click();\ncy.get('#addCarBrand').select('Audi');\ncy.get('#addCarModel').select(1);\ncy.get('#addCarMileage').should('be.visible').clear().type('100').blur().should('have.value', '100');\ncy.get('.modal-footer .btn-primary').click();\ncy.get('.modal').should('not.exist');\ncy.get('body').should('contain', 'Audi');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://qauto.forstudy.space/\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Garage flow`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://qauto.forstudy.space/\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Garage flow`\n    at <unknown> (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:135146:76)\n    at visitFailedByErr (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:134736:12)\n    at <unknown> (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:135129:13)\n    at tryCatcher (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-intro-hw/./cypress/e2e/garage.cy.js:4:7)",
+                "diff": null
+              },
+              "uuid": "5af02ea4-3ecb-4090-9068-55a32d97a4c3",
+              "parentUUID": "f7e0ea63-0a7e-48da-9251-12a24669f7c8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5af02ea4-3ecb-4090-9068-55a32d97a4c3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 387,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

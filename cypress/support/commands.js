@@ -1,15 +1,23 @@
-Cypress.Commands.add('login', (email, password) => {
-  cy.visit('https://qauto.forstudy.space/', {
-    auth: {
-      username: 'guest',
-      password: 'welcome2qauto'
+Cypress.Commands.add('createExpense', (sid, carId) => {
+
+  cy.request({
+
+    method: 'POST',
+
+    url: 'https://qauto.forstudy.space/api/expenses',
+
+    headers: {
+      Cookie: sid
+    },
+
+    body: {
+      carId: carId,
+      reportedAt: '2026-05-07',
+      mileage: 150,
+      liters: 20,
+      totalCost: 100
     }
-  });
 
-  cy.contains('Sign In').click();
+  })
 
-  cy.get('#signinEmail').type(email);
-  cy.get('#signinPassword').type(password);
-
-  cy.contains('Login').click();
-});
+})

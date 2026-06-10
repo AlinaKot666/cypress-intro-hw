@@ -10,12 +10,17 @@ Cypress.Commands.add('createExpense', (sid, carId) => {
     headers: {
       Cookie: sid
     },
+    failOnStatusCode: false,
     body: {
-      carId: carId,
+      carId,
       expenseDate: formattedDate,
       mileage: 150,
       liters: 20,
       pricePerLitre: 1
     }
+  }).then((response) => {
+    cy.log(`STATUS: ${response.status}`);
+    cy.log(JSON.stringify(response.body));
+    console.log(response.body);
   });
 });

@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "cy:qauto": "cypress run --config-file cypress.config.qauto.js",
-    "cy:qauto2": "cypress run --config-file cypress.config.qauto2.js"
+    "cy:qauto2": "cypress run --config-file cypress.config.qauto2.js",
+    "cy:firefox": "cypress run --browser firefox",
+    "cy:firefox:qauto": "cypress run --browser firefox --config-file cypress.config.qauto.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,7 @@
   "homepage": "https://github.com/AlinaKot666/cypress-intro-hw#readme",
   "description": "",
   "devDependencies": {
-    "cypress": "^15.14.0",
+    "cypress": "^13.17.0",
     "mochawesome": "^7.1.4",
     "mochawesome-merge": "^5.1.1",
     "mochawesome-report-generator": "^6.3.2"

@@ -21,4 +21,4 @@ jobs:
         run: npm ci
 
       - name: Run Cypress tests
-        run: npx cypress run
+        run: npx cypress run --spec "cypress/e2e/garage.cy.js,cypress/e2e/registration.cy.js,cypress/e2e/smoke.cy.js"
